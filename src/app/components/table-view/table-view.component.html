@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Table of Data</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of data">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.value }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <h2>Table of users</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>E-mail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of users">
+      <td>{{ item.id }}</td>
+      <td>{{ item.username }}</td>
+      <td>{{ item.email }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>07-04-2025</h2>
+</div>
+
+
+
