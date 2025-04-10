@@ -36,7 +36,31 @@
     </tbody>
   </table>
 
-  <h2>07-04-2025</h2>
+
+  <h2>Table of products</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of products">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity }}</td>
+
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>10-04-2025</h2>
 </div>
 
 

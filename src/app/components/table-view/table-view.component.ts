@@ -4,6 +4,8 @@ import {CommonModule} from "@angular/common";
 import {UserService} from "../../services/user.service";
 import {DataItem} from "../../interfaces/DataItem";
 import {Users} from "../../interfaces/Users";
+import {Products} from "../../interfaces/Products";
+import {ProductsService} from "../../services/products.service";
 
 @Component({
   selector: 'app-table-view',
@@ -15,8 +17,9 @@ import {Users} from "../../interfaces/Users";
   export class TableViewComponent implements OnInit {
   data: DataItem[] = [];
   users: Users[] = [];
+  products :Products[]= [];
 
-  constructor(private dataService: DataService , private  userService :UserService) {}
+  constructor(private dataService: DataService , private  userService :UserService ,private productsService : ProductsService) {}
 
   ngOnInit(): void {
     this.dataService.getData().subscribe((response) => {
@@ -25,6 +28,10 @@ import {Users} from "../../interfaces/Users";
 
     this.userService.getData().subscribe((response)=> {
       this.users = response;
+    });
+
+    this.productsService.getData().subscribe((response)=> {
+      this.products = response;
     });
   }
 
