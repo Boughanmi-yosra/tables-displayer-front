@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import {TableViewComponent} from "./components/table-view/table-view.component";
 
 @Component({

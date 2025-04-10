@@ -6,5 +6,5 @@ import { Injectable } from '@angular/core';
 export class BaseUrlService {
 
   public api = 'https://tables-displayer-backend-latest.onrender.com/api/';
-  constructor() { }
+
 }
